@@ -265,4 +265,4 @@ async def ping(ctx):
 	ms = (t.timestamp - ctx.message.timestamp).total_seconds() * 1000
 	await t.edit(new_content='Pong! Latence : **{} milliseconds** !'.format(int(ms)), content='Pong! Latency : **{} milliseconds** !'.format(int(ms)))
 
-bot.run(bot.run(os.environ[TOKEN]))
+bot.run(bot.run(os.environ['TOKEN']))
