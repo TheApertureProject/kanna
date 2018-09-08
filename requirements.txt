@@ -1,1 +1,1 @@
-git+https://github.com/rapptz/discord.py@rewrite
+pip install git+https://github.com/rapptz/discord.py@rewrite
