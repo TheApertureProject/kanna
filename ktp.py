@@ -56,16 +56,16 @@ async def on_member_join(member):
 	await member.add_roles(role, role2, role3, role4)
 	try :
 		await member.send(f"""tohru.exe et moi te souhaitons la bienvenue, **{member.display_name}** ! Je t'ai attribué tous les rôles nécessaires à ta bonne intégration sur notre serveur.
-		
-			| Nous disposons d'un **système de rôle auto-attribuables par l'utilisateur**, donc n'hésite pas à jeter un oeil dans <#466643001066782721>, <#466643077122097153> et <#466643030246424597> pour les obtenir !
-			| Le channel <#467021094793117707> est à ta disposition pour en dire un peu plus sur toi !
-			| Et enfin, n'oublie pas de check <#466629126325927936> et <#466629153291239435> **pour encore mieux connaître notre serveur et ses règles** !
-		
-		Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
-		
-			| Invite de notre serveur : https://discord.gg/HnMBzJn
-		```Markdown
-		#Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
+
+	| Nous disposons d'un **système de rôle auto-attribuables par l'utilisateur**, donc n'hésite pas à jeter un oeil dans <#466643001066782721>, <#466643077122097153> et <#466643030246424597> pour les obtenir !
+	| Le channel <#467021094793117707> est à ta disposition pour en dire un peu plus sur toi !
+	| Et enfin, n'oublie pas de check <#466629126325927936> et <#466629153291239435> **pour encore mieux connaître notre serveur et ses règles** !
+
+Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
+
+	| Invite de notre serveur : https://discord.gg/HnMBzJn
+```Markdown
+#Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
 		```Coded by tohru.exe#9355 ^^```""")
 		my_guild = bot.get_guild(466600971213209600)
 		join = my_guild.get_channel(466600971213209602)
@@ -74,16 +74,16 @@ async def on_member_join(member):
 		my_guild = bot.get_guild(466600971213209600)
 		join = my_guild.get_channel(466603496322498561)
 		await join.send(f"""tohru.exe et moi te souhaitons la bienvenue, **{member.mention}** ! Je t'ai attribué tous les rôles nécessaires à ta bonne intégration sur notre serveur.
-		
-			| Nous disposons d'un **système de rôle auto-attribuables par l'utilisateur**, donc n'hésite pas à jeter un oeil dans <#466643001066782721>, <#466643077122097153> et <#466643030246424597> pour les obtenir !
-			| Le channel <#467021094793117707> est à ta disposition pour en dire un peu plus sur toi !
-			| Et enfin, n'oublie pas de check <#466629126325927936> et <#466629153291239435> **pour encore mieux connaître notre serveur et ses règles** !
-		
-		Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
-		
-			| Invite de notre serveur : https://discord.gg/HnMBzJn
-		```Markdown
-		#Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
+
+	| Nous disposons d'un **système de rôle auto-attribuables par l'utilisateur**, donc n'hésite pas à jeter un oeil dans <#466643001066782721>, <#466643077122097153> et <#466643030246424597> pour les obtenir !
+	| Le channel <#467021094793117707> est à ta disposition pour en dire un peu plus sur toi !
+	| Et enfin, n'oublie pas de check <#466629126325927936> et <#466629153291239435> **pour encore mieux connaître notre serveur et ses règles** !
+
+Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
+
+	| Invite de notre serveur : https://discord.gg/HnMBzJn
+```Markdown
+#Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
 		```Coded by tohru.exe#9355 ^^```""")
 
 @bot.event
