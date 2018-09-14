@@ -43,7 +43,7 @@ bot.remove_command('help')
 async def on_ready():
 	print(('[' + ctime()) + '] Connection successfully established with the bot user :', bot.user.name)
 	print('Bot user ID :', bot.user.name)
-	await bot.change_presence(activity=discord.Game(name='k!help'))
+	await bot.change_presence(activity=discord.Game(name='sur Aperture :3 | k!help'))
 	print(('[' + ctime()) + '] Presence successfully updated !')
 	print('___________________________________________________')
 
