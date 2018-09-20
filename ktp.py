@@ -66,7 +66,8 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 	| Invite de notre serveur : https://discord.gg/HnMBzJn
 ```Markdown
 #Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
-		```Coded by tohru.exe#9355 ^^```""")
+		```Coded by tohru.exe#9355 ^^```
+__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : https://bit.ly/2KCvxDw""")
 		my_guild = bot.get_guild(466600971213209600)
 		join = my_guild.get_channel(466600971213209602)
 		await join.send(f"Bienvenue, {member.mention} ! Merci de vérifier tes messages privés, je t'ai envoyé tout le nécessaire pour mieux maîtriser notre serveur... Nous espérons que tu te plairas ici !")
@@ -84,7 +85,8 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 	| Invite de notre serveur : https://discord.gg/HnMBzJn
 ```Markdown
 #Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
-		```Coded by tohru.exe#9355 ^^```""")
+		```Coded by tohru.exe#9355 ^^```
+__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : <https://bit.ly/2KCvxDw>""")
 
 @bot.event
 async def on_member_remove(member):
