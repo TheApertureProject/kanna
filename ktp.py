@@ -66,8 +66,10 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 	| Invite de notre serveur : https://discord.gg/HnMBzJn
 ```Markdown
 #Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
-		```Coded by tohru.exe#9355 ^^```
-__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : https://bit.ly/2KCvxDw""")
+		```Coded by tohru.plp#9355 ^^```
+__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : https://bit.ly/2KCvxDw
+
+Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! https://discord.gg/bDJ7HFg""")
 		my_guild = bot.get_guild(466600971213209600)
 		join = my_guild.get_channel(466600971213209602)
 		await join.send(f"Bienvenue, {member.mention} ! Merci de vérifier tes messages privés, je t'ai envoyé tout le nécessaire pour mieux maîtriser notre serveur... Nous espérons que tu te plairas ici !")
@@ -85,8 +87,10 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 	| Invite de notre serveur : https://discord.gg/HnMBzJn
 ```Markdown
 #Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
-		```Coded by tohru.exe#9355 ^^```
-__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : <https://bit.ly/2KCvxDw>""")
+		```Coded by tohru.plp#9355 ^^```
+__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : <https://bit.ly/2KCvxDw>
+
+Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! <https://discord.gg/bDJ7HFg""")
 
 @bot.event
 async def on_member_remove(member):
@@ -114,33 +118,73 @@ def is_owner(ctx):
 	else :
 		return False
 
-@bot.command()
+@bot.group(invoke_without_command=True, aliases=['hlp', 'commandlist', 'commands'])
 async def help(ctx):
-	e = discord.Embed(description="Commandes de base", title='Page 1', color=0x00FFC0, timestamp=datetime.utcnow())
-	e.add_field(name='help', value='Affiche ce message')
-	e.add_field(name='info', value='Apprenez-en plus sur moi ! :D')
-	e.add_field(name='ping', value='Testez ma réactivité')
-	e.add_field(name='suggest <suggestion>', value='Suggérez-nous vos idées pour le bot avec cette commande.')
-	e.add_field(name='bugreport <bug>', value ='Signalez-nous des bugs trouvés sur Kanna via cette commande.')
-	a = discord.Embed(description="Commandes de modération", title='Page 2', color=0x00FF80, timestamp=datetime.utcnow()) 
-	a.add_field(name='kick <member/id>', value="Excluez un utilisateur du serveur.")
-	a.add_field(name='ban <member/id> <reason>', value="Excluez définitivement un utilisateur du serveur.")
-	a.add_field(name='clear <amount of messages>', value='Supprimez un nombre précis de messages - Pas de limites ! Soyez prudent :3')
-	a.add_field(name='De nouvelles commandes sont en préparation et arriveront bientôt !', value='💠')
-	c = discord.Embed(description='Utilitaires', title='Page 3', color=0x00FF40, timestamp=datetime.utcnow())
-	c.add_field(name='pp <user>', value="Obtenez la photo de profil d'un utilisateur du serveur")
-	d = discord.Embed(description='Fun', title='Page 4', color=0xFFA2DD, timestamp=datetime.utcnow())
-	d.add_field(name='coolservs', value='Just take a look on our other servers !')
-	d.add_field(name='Other cool and fun commands are coming !', value='Hang on a little~')
-	await ctx.send(embed=e)
-	await ctx.send(embed=a)
-	await ctx.send(embed=c)
-	await ctx.send(embed=d)
+	e = discord.Embed(description="Help categories", title='*Interactive help*', color=0x33CC33, timestamp=datetime.utcnow())
+	e.set_thumbnail(url="https://cdn.discordapp.com/emojis/377480330103488532.png?v=1")
+	e.add_field(name='`info`', value='Bot information related commands')
+	e.add_field(name='`utilities`', value='All our amazing utilities !')
+	e.add_field(name='`moderator`', value='Moderation related commands')
+	e.add_field(name='`fun`', value='Fun related commands ~^^')
+	e.set_footer(text='Type <k!help <category> to display specific commands.')
 	if ctx.author.id == 458586186328571913 :
-		b = discord.Embed(description='Master commands ♥️', title='Page ♾️', color=0xFF0000, timestamp=datetime.utcnow())
-		b.add_field(name='say <channel> <text>', value='Talk through me !')
-		b.add_field(name='shutdown', value='Shut me down...')
+			e.add_field(name='`master`', value="My master's commands !")
+	await ctx.send(embed=e)
+
+@help.command(name="info")
+async def help_info(ctx):
+	e = discord.Embed(description="Basic commands", title='Commands list', color=0x00FFC0, timestamp=datetime.utcnow())
+	e.set_thumbnail(url="https://cdn.discordapp.com/emojis/470912852543275009.gif?v=1")
+	e.add_field(name='`info`', value='Get to know me 💮')
+	e.add_field(name='`ping`', value='Test my reactivity !')
+	e.add_field(name='`suggest <suggestion>`', value='Tell us what you think we could improve on Kanna. Your suggestion will be sent to the official bot server.')
+	e.add_field(name='`bugreport <bug>`', value ='If you found some bug or error on Kanna, just tell us via this command ! Your report will be sent to the official bot server.')
+	e.add_field(name='`help`', value='Displays the primary help message')
+	await ctx.send(embed=e)
+
+@help.command(name='all')
+async def help_all(ctx):
+	c = discord.Embed(description='All the commands', title='Commands list', color=0x003366, timestamp=datetime.utcnow())
+	c.set_thumbnail(url="https://cdn.discordapp.com/emojis/471044511804686348.gif?v=1")
+	c.add_field(name="`help`, `info`, `ping`, `suggest <suggestion>`, `bugreport <bug>`, `kick <member/id>`,`ban <member/id> <reason>`, `clear <amount of messages>`, `clear <amount of messages>`", value='Full commands list')
+	c.add_field(name="`info`, `utilities`, `moderator`, `fun`", value='Help categories')
+	await ctx.send(embed=c)
+
+@help.command(name='utilities')
+async def help_utilities(ctx):
+	c = discord.Embed(description='Utilities', title='Commands list', color=0x003366, timestamp=datetime.utcnow())
+	c.set_thumbnail(url="https://cdn.discordapp.com/emojis/395627468276367370.png?v=1")
+	c.add_field(name='`pp <user>`', value='Get the profile picture of some user')
+	await ctx.send(embed=c)
+
+@help.command(name="moderator")
+async def help_moderator(ctx):
+	a = discord.Embed(description="Moderator commands", title='Commands list', color=0xffff00, timestamp=datetime.utcnow()) 
+	a.set_thumbnail(url="https://cdn.discordapp.com/emojis/474539445379661824.png?v=1")
+	a.add_field(name='`kick <member/id>`', value='Kick someone from the server')
+	a.add_field(name='`ban <member/id> <reason>`', value='Kick a member from the server permanently (ban)')
+	a.add_field(name='`clear <amount of messages>`', value='Delete a specific number of messages (no limit - be extremely careful)')
+	await ctx.send(embed=a)
+
+@help.command(name="fun")
+async def help_fun(ctx):
+	d = discord.Embed(description='Fun', title='Commands list', color=0xFFA2DD, timestamp=datetime.utcnow())
+	d.set_thumbnail(url="https://cdn.discordapp.com/emojis/398860813881835533.png?v=1")
+	d.add_field(name='Lots of commands incoming !', value="Stay awhile, they'll be deployed soon ;)")
+	await ctx.send(embed=d)
+
+@commands.check(is_owner)
+@help.command(name="master")
+async def help_master(ctx):
+	b = discord.Embed(description='Master commands ♥️', title='Commands list', color=0xFF0000, timestamp=datetime.utcnow())
+	b.set_thumbnail(url="https://cdn.discordapp.com/attachments/476653267036930049/498859365046943745/1538964466545.png")
+	b.add_field(name='`say <channel> <text>`', value='Talk through me !')
+	b.add_field(name='`shutdown`', value='Shut me down...')
+	b.add_field(name='`presence`', value='Reload the presence indicator')
+	try:
 		await ctx.send(embed=b)
+	except:
+await ctx.send("Access denied ! Y~you're not my master !")
 
 @bot.command()
 async def invite(ctx):
