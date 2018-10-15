@@ -184,7 +184,7 @@ async def help_master(ctx):
 	try:
 		await ctx.send(embed=b)
 	except:
-await ctx.send("Access denied ! Y~you're not my master !")
+		await ctx.send("Access denied ! Y~you're not my master !")
 
 @bot.command()
 async def invite(ctx):
