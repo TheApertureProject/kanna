@@ -54,6 +54,9 @@ async def on_member_join(member):
 	role3 = discord.utils.get(member.guild.roles, name='▬▬▬▬▬▬Hobbies▬▬▬▬▬▬')
 	role4 = discord.utils.get(member.guild.roles, name='▬▬▬▬▬Jeux-vidéos▬▬▬▬▬')
 	await member.add_roles(role, role2, role3, role4)
+	bvn = discord.Embed(description="The AP3RTURE Project", title='*Bienvenue !*', color=0x33CC33, timestamp=datetime.utcnow())
+	bvn.add_thumbnail(url='https://cdn.discordapp.com/attachments/489041727697584148/503466180481384448/1528224039633.png')
+	bvn.add_field(name=f'Merci de nous avoir rejoint, {member.display_name} !', value='Poulpy et moi te souhaitons la bienvenue !)
 	try :
 		await member.send(f"""tohru.exe et moi te souhaitons la bienvenue, **{member.display_name}** ! Je t'ai attribué tous les rôles nécessaires à ta bonne intégration sur notre serveur.
 
