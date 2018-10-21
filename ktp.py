@@ -52,7 +52,7 @@ async def on_member_join(member):
 	if 'discord.gg' or 'twitch.tv' in member.name.lower():
 		await member.ban(reason='Pseudo-Link')
 
-@bot.listen()
+@bot.event
 async def on_member_join(member):
 	role = discord.utils.get(member.guild.roles, name='Cuties')
 	role2 = discord.utils.get(member.guild.roles, name='▬▬▬▬▬▬Profil▬▬▬▬▬▬▬')
