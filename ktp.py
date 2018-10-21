@@ -103,7 +103,8 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 __Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : <https://bit.ly/2KCvxDw>
 
 Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! https://discord.gg/bDJ7HFg""")
-
+	except:
+		print('Usr banned')
 @bot.event
 async def on_member_remove(member):
 	my_guild = bot.get_guild(466600971213209600)
