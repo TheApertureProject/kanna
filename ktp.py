@@ -47,11 +47,6 @@ async def on_ready():
 	print(('[' + ctime()) + '] Presence successfully updated !')
 	print('___________________________________________________')
 
-@bot.listen()
-async def on_member_join(member):
-	if 'discord.gg' or 'twitch.tv' in member.name.lower():
-		await member.ban(reason='Pseudo-Link')
-
 @bot.event
 async def on_member_join(member):
 	role = discord.utils.get(member.guild.roles, name='Cuties')
