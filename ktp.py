@@ -55,11 +55,11 @@ async def on_member_join(member):
 	role4 = discord.utils.get(member.guild.roles, name='▬▬▬▬▬Jeux-vidéos▬▬▬▬▬')
 	await member.add_roles(role, role2, role3, role4)
 	bvn = discord.Embed(description="The AP3RTURE Project", title='*Bienvenue !*', color=0x33CC33, timestamp=datetime.utcnow())
-	bvn.add_thumbnail(url='https://cdn.discordapp.com/attachments/489041727697584148/503466180481384448/1528224039633.png')
-	bvn.add_field(name=f'Merci de nous avoir rejoint, {member.display_name} !', value='Poulpy et moi te souhaitons la bienvenue !)
+	bvn.add_thumbnail(url='https://cdn.discordapp.com/attachments/489041727697584148/503588638509105153/1540086527254.png')
+	bvn.add_field(name=f'Merci de nous avoir rejoint, {member.display_name} !', value="Poulpy et moi te souhaitons la bienvenue ! Je t'ai attribué tous les rôles nécessaires à ta bonne intégration sur notre serveur.")
 	try :
-		await member.send(f"""tohru.exe et moi te souhaitons la bienvenue, **{member.display_name}** ! Je t'ai attribué tous les rôles nécessaires à ta bonne intégration sur notre serveur.
-
+		await member.send(embed=bvn)
+		await member.send(f"""
 	| Nous disposons d'un **système de rôle auto-attribuables par l'utilisateur**, donc n'hésite pas à jeter un oeil dans <#466643001066782721>, <#466643077122097153> et <#466643030246424597> pour les obtenir !
 	| Le channel <#467021094793117707> est à ta disposition pour en dire un peu plus sur toi !
 	| Et enfin, n'oublie pas de check <#466629126325927936> et <#466629153291239435> **pour encore mieux connaître notre serveur et ses règles** !
@@ -79,8 +79,8 @@ Envie, vous aussi, de développer vos propres bots ? Rejoignez la section dével
 	except :
 		my_guild = bot.get_guild(466600971213209600)
 		join = my_guild.get_channel(466603496322498561)
-		await join.send(f"""tohru.exe et moi te souhaitons la bienvenue, **{member.mention}** ! Je t'ai attribué tous les rôles nécessaires à ta bonne intégration sur notre serveur.
-
+		await join.send(embed=bvn)
+		await join.send(f"""
 	| Nous disposons d'un **système de rôle auto-attribuables par l'utilisateur**, donc n'hésite pas à jeter un oeil dans <#466643001066782721>, <#466643077122097153> et <#466643030246424597> pour les obtenir !
 	| Le channel <#467021094793117707> est à ta disposition pour en dire un peu plus sur toi !
 	| Et enfin, n'oublie pas de check <#466629126325927936> et <#466629153291239435> **pour encore mieux connaître notre serveur et ses règles** !
@@ -93,7 +93,7 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 		```Coded by tohru.plp#9355 ^^```
 __Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : <https://bit.ly/2KCvxDw>
 
-Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! <https://discord.gg/bDJ7HFg""")
+Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! https://discord.gg/bDJ7HFg""")
 
 @bot.event
 async def on_member_remove(member):
