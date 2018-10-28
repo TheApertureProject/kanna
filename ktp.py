@@ -159,6 +159,7 @@ async def help_utilities(ctx):
 	c = discord.Embed(description='Utilities', title='Commands list', color=0x003366, timestamp=datetime.utcnow())
 	c.set_thumbnail(url="https://cdn.discordapp.com/emojis/395627468276367370.png?v=1")
 	c.add_field(name='`pp <user>`', value='Get the profile picture of some user')
+	c.add_field(name='`request <Bot Name> <Bot ID>`', value='Send a request to get your bot added on the AP3RTURE Development Team server.')
 	await ctx.send(embed=c)
 
 @help.command(name="moderator")
@@ -189,6 +190,16 @@ async def help_master(ctx):
 		await ctx.send(embed=b)
 	except:
 		await ctx.send("Access denied ! Y~you're not my master !")
+
+@bot.command(aliases=['request'])
+async def register(ctx, bname, bid):
+	apdev = bot.get_guild(501064268737937408)
+	rq = apdev.get_channel(504829648996270080)
+	e = discord.Embed(description='Bot request', title=f'{bname}', color=1565439, timestamp=datetime.utcnow())
+	e.add_field(name=f'ID : {bid}', value=f'Requested by {ctx.author} at {datetime.utcnow()}')
+	e.add_field(name=f'Invite link', value=f'https://discordapp.com/oauth2/authorize?client_id={bid}&scope=bot&permissions=0')
+	e.set_footer(text='type k!request <bot name> <bot id> to request yours.')
+	await rq.send(embed=e)
 
 @bot.command()
 async def invite(ctx):
