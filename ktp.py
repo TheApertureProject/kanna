@@ -200,7 +200,7 @@ async def register(ctx, bname, bid):
 	e.add_field(name=f'Invite link', value=f'https://discordapp.com/oauth2/authorize?client_id={bid}&scope=bot&permissions=0')
 	e.set_footer(text='type k!request <bot name> <bot id> to request yours.')
 	await rq.send(embed=e)
-	await ctx.send(f"Votre bot, {bname}, à été proposé avec succès et devrait bientôt être ajouté. Vous pouvez suivre l'avancement de votre demande dans <#504829648996270080>."
+	await ctx.send(f"Votre bot, {bname}, à été proposé avec succès et devrait bientôt être ajouté. Vous pouvez suivre l'avancement de votre demande dans <#504829648996270080>.")
 	await ctx.message.add_reaction('❌')
 	await ctx.message.add_reaction('🗸')
 
