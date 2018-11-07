@@ -61,12 +61,6 @@ async def on_member_join(member):
 
 Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 
-	| Invite de notre serveur : https://discord.gg/HnMBzJn
-```Markdown
-#Not french ? No worries ! Just type -role Multi-Lingual anywhere into the server to access to the english category :3```
-		```Coded by Poulpy#9355 ^^```
-__Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : https://bit.ly/2KCvxDw
-
 Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! https://discord.gg/bDJ7HFg"""
 
 	bvn = discord.Embed(description="The AP3RTURE Project", title='*Bienvenue !*', color=0x33CC33, timestamp=datetime.utcnow())
