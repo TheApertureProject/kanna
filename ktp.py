@@ -67,7 +67,7 @@ Nous espérons que tu apprécieras ton séjour sur notre merveilleux serveur !
 		```Coded by Poulpy#9355 ^^```
 __Note__ : la version publique de Kanna pour vos serveurs est disponible à cette adresse : https://bit.ly/2KCvxDw
 
-Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! https://discord.gg/bDJ7HFg""")
+Envie, vous aussi, de développer vos propres bots ? Rejoignez la section développement d'AP3RTURE ici ! https://discord.gg/bDJ7HFg"""
 
 	bvn = discord.Embed(description="The AP3RTURE Project", title='*Bienvenue !*', color=0x33CC33, timestamp=datetime.utcnow())
 	bvn.set_thumbnail(url='https://cdn.discordapp.com/attachments/489041727697584148/503588638509105153/1540086527254.png')
