@@ -67,7 +67,6 @@ Envie, vous aussi, de développer vos propres bots ? Rejoignez la section dével
 	bvn.set_thumbnail(url='https://cdn.discordapp.com/attachments/489041727697584148/503588638509105153/1540086527254.png')
 	bvn.add_field(name=f'Merci de nous avoir rejoint, {member.display_name} !', value=a)
 	bvn.set_image(url='https://cdn.discordapp.com/attachments/489041727697584148/503590193983389707/1540042806158.png')
-	await member.add_roles(role, role2, role3, role4)
 	try :
 		await member.send(embed=bvn)
 		my_guild = bot.get_guild(466600971213209600)
@@ -77,6 +76,7 @@ Envie, vous aussi, de développer vos propres bots ? Rejoignez la section dével
 		my_guild = bot.get_guild(466600971213209600)
 		join = my_guild.get_channel(466603496322498561)
 		await join.send(embed=bvn)
+	await member.add_roles(role, role2, role3, role4)
 
 @bot.event
 async def on_member_remove(member):
